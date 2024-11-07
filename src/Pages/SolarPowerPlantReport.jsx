@@ -68,6 +68,8 @@ const SolarPowerPlantReport = () => {
                   <input
                     type="text"
                     className="w-full p-1 border-none border-gray-300 outline-none text-lg"
+                    onChange={handleChange}
+                    name="address"
                   />
                 </td>
               </tr>
@@ -369,13 +371,13 @@ const SolarPowerPlantReport = () => {
             <input
               type="text"
               className="border-b border-gray-300 outline-none mx-1 w-56 px-2 text-lg"
-              
+              value={formData.consumerName}
             />{" "}
             [Consumer] bearing Consumer Number{" "}
             <input
               type="text"
               className="border-b border-gray-300 outline-none mx-1 w-56 px-2 text-lg"
-              
+              value={formData.consumerNumber}
             />{" "}
             Ensured structural stability of installed solar power plant and
             obtained requisite permissions from the concerned authority. If in

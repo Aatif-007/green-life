@@ -10,12 +10,6 @@ const EarthingDetails = () => {
   const reportRef = useRef();
   const navigate = useNavigate();
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-    console.log(formData);
-  };
-
   const generatePDF = () => {
     const element = reportRef.current;
     html2pdf().from(element).save("Earthingdetails.pdf");
@@ -56,7 +50,7 @@ const EarthingDetails = () => {
                       type="text"
                       className="border-b border-black outline-none mx-1 w-1/2 px-2 text-lg"
                       name="consumerName"
-                      onChange={handleChange}
+                      value={formData.consumerName}
                     />
                   </th>
                 </tr>
@@ -71,7 +65,7 @@ const EarthingDetails = () => {
                       type="text"
                       className="border-b border-black outline-none mx-1 w-1/2 px-2 text-lg"
                       name="consumerNumber"
-                      onChange={handleChange}
+                      value={formData.consumerNumber}
                     />
                   </th>
                 </tr>

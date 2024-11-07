@@ -187,13 +187,13 @@ const DeclarationCertificate = () => {
     <tr className="border-black text-lg">
       <td className="border border-black p-2 text-lg">Invertor Make :</td>
       <td className="border border-black">
-        <input type="text" className="border-b border-black text-lg w-full" />
+        <input type="text" className=" border-black text-lg w-full" />
       </td>
     </tr>
     <tr className="border border-black">
       <td className="border border-black p-2 text-lg">SR No :</td>
       <td className="border border-black">
-        <input type="text" className="border-b border-black text-lg w-full" />
+        <input type="text" className=" border-black text-lg w-full" />
       </td>
     </tr>
   </thead>
