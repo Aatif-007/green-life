@@ -1,18 +1,16 @@
-
-
 import React, { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { usePdf } from "../Context/PdfGenerate"; // Assuming PdfGenerate is your context file
 import { useFormContext } from "../Context/FormContext";
-import  html2pdf from "html2pdf.js";
+import html2pdf from "html2pdf.js";
 const SolarPowerPlantReport = () => {
   const navigate = useNavigate();
   const { formData, setFormData } = useFormContext();
-  const reportRef = useRef()
+  const reportRef = useRef();
 
   const generatePDF = () => {
     const element = reportRef.current;
-    html2pdf().from(element).save("declarationcertificate.pdf");
+    html2pdf().from(element).save("solarpowerplant.pdf");
   };
 
   const handleChange = (e) => {
@@ -28,10 +26,10 @@ const SolarPowerPlantReport = () => {
           <h1 className="text-2xl font-bold mb-4 text-center">
             Work Completion Report for Solar Power Plant
           </h1>
-          <table className="w-full border border-black text-sm">
+          <table className="w-full border border-black text-base">
             <thead>
               <tr>
-                <th className="border border-black p-2">Sr.No</th>
+                <th className="border border-black">Sr.No</th>
                 <th className="border border-black p-2">Component</th>
                 <th className="border border-black p-2">Observation</th>
               </tr>
@@ -245,7 +243,7 @@ const SolarPowerPlantReport = () => {
                 </td>
                 <td className="border border-black p-2">3/3.3/4/5</td>
               </tr>
-              <tr>
+              <tr className="">
                 <td className=" p-2 text-center"></td>
                 <td className="border border-black p-2">HPD</td>
                 <td className="border border-black p-2">-</td>
@@ -366,16 +364,18 @@ const SolarPowerPlantReport = () => {
               </tr>
             </tbody>
           </table>
-          <div className="mt-2 text-md p-4">
+          <div className="mt-2 text-md p-4 leading-relaxed">
             We Green Life Solution Pvt Ltd &{" "}
             <input
               type="text"
-              className="border border-gray-300 outline-none"
+              className="border-b border-gray-300 outline-none mx-1 w-56 px-2 text-lg"
+              
             />{" "}
-            [Consumer] bearing Consumer Number
+            [Consumer] bearing Consumer Number{" "}
             <input
               type="text"
-              className="border border-gray-300 outline-none"
+              className="border-b border-gray-300 outline-none mx-1 w-56 px-2 text-lg"
+              
             />{" "}
             Ensured structural stability of installed solar power plant and
             obtained requisite permissions from the concerned authority. If in
@@ -383,7 +383,8 @@ const SolarPowerPlantReport = () => {
             installed solar power plant, MSEDCL will not be held responsible for
             any loss to property or human life, if any.
           </div>
-          <div className="flex justify-between mx-24 mt-12 text-lg">
+
+          <div className="flex justify-between mx-24 mt-5 text-xl mb-5">
             <p>Signature[Vendor]</p>
             <p>Signature[Consumer]</p>
           </div>
@@ -410,4 +411,3 @@ const SolarPowerPlantReport = () => {
 SolarPowerPlantReport.displayName = "SolarPowerPlantReport";
 
 export default SolarPowerPlantReport;
-
