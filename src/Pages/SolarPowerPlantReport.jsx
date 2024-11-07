@@ -21,8 +21,8 @@ const SolarPowerPlantReport = () => {
 
   return (
     <div className="p-6 mx-72">
-      <div className="flex justify-center items-center">
-        <div className="" ref={reportRef}>
+      <div className="flex justify-center items-center" ref={reportRef}>
+        <div className="p-5" ref={reportRef}>
           <h1 className="text-2xl font-bold mb-4 text-center">
             Work Completion Report for Solar Power Plant
           </h1>
@@ -65,12 +65,13 @@ const SolarPowerPlantReport = () => {
                   Site/Location With Complete Address
                 </td>
                 <td className="border border-black p-2">
-                  <input
-                    type="text"
-                    className="w-full p-1 border-none border-gray-300 outline-none text-lg"
-                    onChange={handleChange}
-                    name="address"
-                  />
+                  
+                  <textarea className="w-full p-1 border-none border-gray-300 outline-none text-lg"
+                  onChange={handleChange}
+                  name="address"
+                  >
+
+                  </textarea>
                 </td>
               </tr>
               <tr>
@@ -78,12 +79,16 @@ const SolarPowerPlantReport = () => {
                 <td className="border border-black p-2">
                   Category: Govt/Private Sector
                 </td>
-                <td className="border border-black p-2">Private</td>
+                <td className="border border-black p-2">
+                  <input type="text" className="w-full outline-none px-1" />
+                </td>
               </tr>
               <tr>
                 <td className="border border-black p-2 text-center">5</td>
                 <td className="border border-black p-2">Sanction number</td>
-                <td className="border border-black p-2">3.3</td>
+                <td className="border border-black p-2">
+                  <input type="text" className="w-full outline-none px-1" />
+                </td>
               </tr>
 
               <tr>
@@ -103,7 +108,9 @@ const SolarPowerPlantReport = () => {
                 <td className=" p-2">
                   Capacity of solar PV system (KW) DC (Inverter) Mono
                 </td>
-                <td className="border border-black p-2">mono</td>
+                <td className="border border-black p-2">
+                  <input type="text" className="w-full outline-none px-1" />
+                </td>
               </tr>
               <tr>
                 <td className="border-t border-black  p-2 text-center"></td>
@@ -144,45 +151,55 @@ const SolarPowerPlantReport = () => {
               <tr>
                 <td className=" p-2 text-center"></td>
                 <td className="border border-black p-2">Wattage per module</td>
-                <td className="border border-black p-2">540/545/550</td>
+                <td className="border border-black p-2"><input type="text" className="w-full outline-none px-1" /></td>
               </tr>
               <tr>
                 <td className=" p-2 text-center"></td>
                 <td className="border border-black p-2">No. of Module</td>
-                <td className="border border-black p-2">21%</td>
+                <td className="border border-black p-2">
+                <input type="text" className="w-full outline-none px-1" />
+                </td>
               </tr>
               <tr>
                 <td className=" p-2 text-center">7</td>
                 <td className="border border-black p-2">Module Efficiency</td>
-                <td className="border border-black p-2">½ Series</td>
+                <td className="border border-black p-2">
+                <input type="text" className="w-full outline-none px-1" />
+                </td>
               </tr>
               <tr>
                 <td className=" p-2 text-center"></td>
                 <td className="border border-black p-2">
                   No. of series & parallel Combinations
                 </td>
-                <td className="border border-black p-2">21 Degree</td>
+                <td className="border border-black p-2">
+                <input type="text" className="w-full outline-none px-1" />
+                </td>
               </tr>
               <tr>
                 <td className=" p-2 text-center"></td>
                 <td className="border border-black p-2">
                   Tilt Angle of modules
                 </td>
-                <td className="border border-black p-2">Enclosed</td>
+                <td className="border border-black p-2">
+                <input type="text" className="w-full outline-none px-1" />
+                </td>
               </tr>
               <tr>
                 <td className=" p-2 text-center"></td>
                 <td className="border border-black p-2">
                   IEC certificate (Enclose IEC Certificate)
                 </td>
-                <td className="border border-black p-2">Indigenous</td>
+                <td className="border border-black p-2">
+                <input type="text" className="w-full outline-none px-1" />
+                </td>
               </tr>
               <tr>
                 <td className=" p-2 text-center"></td>
                 <td className="border border-black p-2">
                   Whether Imported or Indigenous
                 </td>
-                <td className="border border-black p-2">Inside</td>
+                <td className="border border-black p-2"><input type="text" className="w-full outline-none px-1" /></td>
               </tr>
               <tr>
                 <td className=" p-2 text-center"></td>
@@ -236,14 +253,14 @@ const SolarPowerPlantReport = () => {
                 <td className="border border-black p-2">
                   Type of charge controller/ MPPT
                 </td>
-                <td className="border border-black p-2">MPPT</td>
+                <td className="border border-black p-2"><input type="text" className="w-full outline-none px-1" /></td>
               </tr>
               <tr>
                 <td className=" p-2 text-center"></td>
                 <td className="border border-black p-2">
                   Capacity of Inverter
                 </td>
-                <td className="border border-black p-2">3/3.3/4/5</td>
+                <td className="border border-black p-2"><input type="text" className="w-full outline-none px-1" /></td>
               </tr>
               <tr className="">
                 <td className=" p-2 text-center"></td>
@@ -255,61 +272,61 @@ const SolarPowerPlantReport = () => {
                 <td className="border border-black p-2">
                   Year of manufacturing
                 </td>
-                <td className="border border-black p-2">2023/2024</td>
+                <td className="border border-black p-2"><input type="text" className="w-full outline-none px-1" /></td>
               </tr>
 
               <tr>
                 <td className="border-t border-black p-2 text-center"></td>
                 <td className="border border-black p-2">AC Output</td>
-                <td className="border border-black p-2">240/440</td>
+                <td className="border border-black p-2"><input type="text" className="w-full outline-none px-1" /></td>
               </tr>
               <tr>
                 <td className=" p-2 text-center"></td>
                 <td className="border border-black p-2">
                   Whether hybrid or stand alone
                 </td>
-                <td className="border border-black p-2">On gird</td>
+                <td className="border border-black p-2"><input type="text" className="w-full outline-none px-1" /></td>
               </tr>
               <tr>
                 <td className=" p-2 text-center">9</td>
                 <td className="border border-black p-2">
                   Whether Indigenous or imported
                 </td>
-                <td className="border border-black p-2">Indigenous</td>
+                <td className="border border-black p-2"><input type="text" className="w-full outline-none px-1" /></td>
               </tr>
               <tr>
                 <td className=" p-2 text-center"></td>
                 <td className="border border-black p-2">
                   (Enclose test certificate as per MNRE requirement)
                 </td>
-                <td className="border border-black p-2">Enclosed</td>
+                <td className="border border-black p-2"><input type="text" className="w-full outline-none px-1" /></td>
               </tr>
               <tr>
                 <td className=" p-2 text-center"></td>
                 <td className="border border-black p-2">
                   Input voltage to inverter
                 </td>
-                <td className="border border-black p-2">300/400/450/550</td>
+                <td className="border border-black p-2"><input type="text" className="w-full outline-none px-1" /></td>
               </tr>
 
               <tr>
                 <td className="border-t border-black p-2 text-center"></td>
                 <td className="border border-black p-2">Structures</td>
-                <td className="border border-black p-2">GI</td>
+                <td className="border border-black p-2"><input type="text" className="w-full outline-none px-1" /></td>
               </tr>
               <tr>
                 <td className=" p-2 text-center">10</td>
                 <td className="border border-black p-2">
                   Tracking or non-tracking
                 </td>
-                <td className="border border-black p-2"> non-tracking</td>
+                <td className="border border-black p-2"><input type="text" className="w-full outline-none px-1" /></td>
               </tr>
               <tr>
                 <td className=" p-2 text-center"></td>
                 <td className="border border-black p-2">
                   Indigenous or Imported
                 </td>
-                <td className="border border-black p-2">Indigenous</td>
+                <td className="border border-black p-2"><input type="text" className="w-full outline-none px-1" /></td>
               </tr>
 
               <tr>
@@ -317,12 +334,12 @@ const SolarPowerPlantReport = () => {
                 <td className="border border-black p-2">
                   DC Cables Make And Size
                 </td>
-                <td className="border border-black p-2">Polycap/Waree</td>
+                <td className="border border-black p-2"><input type="text" className="w-full outline-none px-1" /></td>
               </tr>
               <tr>
                 <td className=" p-2 text-center"></td>
                 <td className="border border-black p-2">Voltage of cable</td>
-                <td className="border border-black p-2"> 11000 V</td>
+                <td className="border border-black p-2"> <input type="text" className="w-full outline-none px-1" /></td>
               </tr>
 
               <tr>
@@ -330,7 +347,7 @@ const SolarPowerPlantReport = () => {
                 <td className="border border-black p-2">
                   AC & DC Distribution Box
                 </td>
-                <td className="border border-black p-2">Suitable</td>
+                <td className="border border-black p-2">Both Installed</td>
               </tr>
               <tr>
                 <td className=" p-2 text-center"></td>
@@ -345,24 +362,24 @@ const SolarPowerPlantReport = () => {
                 <td className="border border-black p-2">
                   Earthing and Protections
                 </td>
-                <td className="border border-black p-2">3 Earthing</td>
+                <td className="border border-black p-2"><input type="text" className="w-full outline-none px-1" /></td>
               </tr>
               <tr>
                 <td className=" p-2 text-center">13</td>
                 <td className="border border-black p-2">Structures</td>
-                <td className="border border-black p-2">Earthing Available</td>
+                <td className="border border-black p-2"><input type="text" className="w-full outline-none px-1" /></td>
               </tr>
               <tr>
                 <td className=" p-2 text-center"></td>
                 <td className="border border-black p-2">Lightening Arrester</td>
-                <td className="border border-black p-2"> Earthing Available</td>
+                <td className="border border-black p-2"><input type="text" className="w-full outline-none px-1" /></td>
               </tr>
               <tr>
                 <td className=" border border-black p-2 text-center">14</td>
                 <td className="border border-black p-2">
                   Monitoring Mechanism for the Installed System
                 </td>
-                <td className="border border-black p-2"> Available</td>
+                <td className="border border-black p-2"><input type="text" className="w-full outline-none px-1" /></td>
               </tr>
             </tbody>
           </table>
