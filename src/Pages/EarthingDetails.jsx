@@ -4,6 +4,7 @@ import logo from "../assets/images/logo.jpeg";
 import { useFormContext } from "../Context/FormContext";
 import { useNavigate } from "react-router-dom";
 import html2pdf from "html2pdf.js";
+import stamp from "../assets/images/stamp.jpeg"
 
 const EarthingDetails = () => {
   const { formData, setFormData } = useFormContext();
@@ -155,19 +156,17 @@ const EarthingDetails = () => {
             </table>
           </div>
           <div className="w-full max-w-3xl">
-            <h1 className="text-xl font-medium my-10">
+            <h1 className="text-xl font-medium my-4">
               For Green Life Solutions Pvt. Ltd.
             </h1>
-
+            <img src={stamp} alt="Company Stamp" className="w-36" />
             <div className="font-medium my-4 flex items-center">
               <span className="w-1/3 text-lg">Authorized Signatory:</span>
-              <input
-                type="text"
-                className="ml-4 p-2 w-1/3 text-xl  border-gray-300 outline-none"
-              />
+              
+              
             </div>
 
-            <div className="font-medium my-4 flex items-center">
+            <div className="font-medium my-2 flex items-center">
               <span className="w-1/3 text-lg">Date:</span>
               <input
                 type="date"
@@ -175,10 +174,10 @@ const EarthingDetails = () => {
               />
             </div>
           </div>
-          <div className="relative min-h-64">
+          <div className="">
             {/* Other page content */}
 
-            <div className="footer absolute bottom-0 w-full">
+            <div className="footer w-full">
               <img src={footer} alt="Footer" className="w-full" />
             </div>
           </div>

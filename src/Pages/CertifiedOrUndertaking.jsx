@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { usePdf } from "../Context/PdfGenerate";
 import { useFormContext } from "../Context/FormContext";
 import  html2pdf  from "html2pdf.js";
-
+import stamp from "../assets/images/stamp.jpeg"
 const CertifiedOrUndertaking = () => {
   const navigate = useNavigate();
   
@@ -41,7 +41,8 @@ const CertifiedOrUndertaking = () => {
     This is to certify that we{" "}
     <input
       type="text"
-      className="border-b border-black outline-none pb-1 mx-1"
+      className="border-b border-black outline-none pb-1 mx-1 w-64 px-1"
+      value={"Green Life Solutions Pvt Ltd"}
     />{" "}
     Installed Solar PV System for Consumer Name :
     <input
@@ -80,6 +81,7 @@ const CertifiedOrUndertaking = () => {
           <p>
             Name of Agency
             <span className="block">[Stamp & Seal]</span>
+            <img src={stamp} alt="" className="w-1/2 my-4" />
           </p>
         </div>
       </div>

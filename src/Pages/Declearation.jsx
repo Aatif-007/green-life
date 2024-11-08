@@ -36,6 +36,8 @@ const Declearation = () => {
                 <input
                   type="text"
                   className="border-b border-black outline-none px-2 py-1 mx-1 w-80"
+                  value={"Green Life Solutions Pvt Ltd"}
+                  
                 />{" "}
                 [Company Name] has installed{" "}
                 <input
@@ -52,12 +54,13 @@ const Declearation = () => {
                 <input
                   type="text"
                   className="border-b border-black outline-none px-2 py-1 mx-1 w-80"
+                  value={formData.address}
                 />
                 [Address] under application number{" "}
                 <input
                   type="text"
                   className="border-b border-black outline-none px-2 py-1 mx-1 w-32"
-                  value={formData.address}
+                  
                 />
                 . dated [date of application] under{" "}
                 <input
@@ -144,12 +147,14 @@ const Declearation = () => {
                 4. I,
                 <input
                   type="text"
-                  className="border-b border-black outline-none px-2 py-1 mx-1 w-56"
+                  className="border-b border-black outline-none px-2 py-1 mx-1 w-64"
+                  
                 />
                 on behalf of M/S{" "}
                 <input
                   type="text"
                   className="border-b border-black outline-none px-2 py-1 mx-1 w-72"
+                  value={"Green Life Solutions Pvt Ltd"}
                 />{" "}
                 [Company Name] further declare that the information given above
                 is true and correct and nothing has been concealed therein. If

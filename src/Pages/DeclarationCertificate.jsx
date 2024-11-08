@@ -2,7 +2,7 @@ import html2pdf from "html2pdf.js";
 import React, { useRef } from "react";
 import { HiOutlinePrinter } from "react-icons/hi";
 import { useNavigate } from "react-router-dom";
-
+import stamp from "../assets/images/stamp.jpeg"
 const DeclarationCertificate = () => {
   const navigate = useNavigate();
   const reportRef = useRef();
@@ -227,6 +227,7 @@ const DeclarationCertificate = () => {
           <div className="flex items-center justify-end text-xl font-medium mt-10 mb-12">
             <p>
               Vendor Signature <br /> [Stamp & Seal]
+              <img src={stamp} alt="stamp" className="w-1/2 my-3" />
             </p>
           </div>
         </div>
