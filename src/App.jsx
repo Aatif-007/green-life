@@ -1,14 +1,17 @@
 import React from "react";
-import EarthingDetails from "./Pages/EarthingDetails";
-import DeclarationCertificate from "./Pages/DeclarationCertificate";
-import Sld from "./Pages/Sld";
+
+// import Sld from "./Pages/Sld";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import GuaranteeCertificate from "./Pages/GuaranteeCertificate";
+
 import { FormProvider } from "./Context/FormContext";
 import SolarPowerPlantReport from "./Pages/SolarPowerPlantReport";
-import CertifiedOrUndertaking from "./Pages/CertifiedOrUndertaking";
-import Declearation from "./Pages/Declearation";
+
+
 import { PdfProvider } from "./Context/PdfGenerate";
+
+import DeclarationforDCR from "./Pages/DeclarationforDCR";
+import GenerationSystem from "./Pages/GenerationSystem";
+import Agreement from "./Pages/Agreement";
 
 const App = () => {
   return (
@@ -18,19 +21,13 @@ const App = () => {
           <Router>
             <Routes>
               <Route path="/" element={<SolarPowerPlantReport />} />
-              <Route path="/earthingdetails" element={<EarthingDetails />} />
-              <Route path="/sld" element={<Sld />} />
-              <Route
-                path="/declarationcertificate"
-                element={<DeclarationCertificate />}
-              />
+              <Route path="/declarationfordcr" element={<DeclarationforDCR />} />
               
               <Route
-                path="/guaranteecertificate"
-                element={<GuaranteeCertificate />}
+                path="/generationsystem"
+                element={<GenerationSystem />}
               />
-              <Route path="/certificate" element={<CertifiedOrUndertaking />} />
-              <Route path="/declearation" element={<Declearation />} />
+              <Route path="/agreement" element={ <Agreement />} />
             </Routes>
           </Router>
         </FormProvider>
