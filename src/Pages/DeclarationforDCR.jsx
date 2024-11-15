@@ -162,7 +162,7 @@ const DeclarationforDCR = () => {
             </p>
 
             <div className="">
-            <table className="border border-black w-full my-4">
+            <table className="border border-black w-full mt-96">
   <thead>
     <tr>
       <th colSpan="3" className="border border-black p-2 text-center font-medium text-xl">
