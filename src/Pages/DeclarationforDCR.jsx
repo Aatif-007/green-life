@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { useFormContext } from "../Context/FormContext";
 import html2pdf from "html2pdf.js";
 import { useNavigate } from "react-router-dom";
-
+import stamp from '../assets/images/stamp.jpeg'
 const DeclarationforDCR = () => {
   const { formData } = useFormContext();
   const reportRef = useRef();
@@ -22,7 +22,7 @@ const DeclarationforDCR = () => {
       <div className="flex justify-center py-10 text-lg">
         {/* Main report container */}
         <div
-          className="w-full max-w-4xl bg-white p-8 rounded-lg shadow-lg"
+          className="w-full max-w-4xl bg-white p-8 rounded-lg "
           ref={reportRef}
         >
           {/* Header Section */}
@@ -47,7 +47,7 @@ const DeclarationforDCR = () => {
                 type="text"
                 className="border-b-2 border-black mx-2 w-20 px-2"
               />
-              Grid Connected Rooftop Solar Plant for
+              KW Grid Connected Rooftop Solar Plant for
               <input
                 type="text"
                 className="border-b-2 border-black mx-2 w-60 px-2"
@@ -69,11 +69,13 @@ const DeclarationforDCR = () => {
               <input
                 type="date"
                 className="border-b-2 border-black mx-2 px-2"
+                value={formData.date}
               />
               under
               <input
                 type="text"
-                className="border-b-2 border-black mx-2 w-60 px-2"
+                className="border-b-2 border-black mx-2 w-[60%] px-2"
+                value="Maharashtra State Electricity Distribution Company Limited"
               />
               .
             </p>
@@ -158,17 +160,69 @@ const DeclarationforDCR = () => {
               Supporting documents and proof of the above information will be
               provided as and when requested by MNRE.
             </p>
+
+            <div className="">
+            <table className="border border-black w-full my-4">
+  <thead>
+    <tr>
+      <th colSpan="3" className="border border-black p-2 text-center font-medium text-xl">
+      Panel Sr No
+      </th>
+    </tr>
+    <tr>
+      <th className="border border-black text-xl text-center "><input type="text" className="w-full h-full px-2" /></th>
+      <th className="border border-black text-xl  text-center"><input type="text" className="w-full px-2" /></th>
+      <th className="border border-black text-xl text-center"><input type="text" className="w-full px-2" /></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td className="border border-black  text-center text-xl "><input type="text" className="w-full" /></td>
+      <td className="border border-black p-2 text-center text-xl"><input type="text" className="w-full" /></td>
+      <td className="border border-black p-2 text-center text-xl"><input type="text" className="w-full" /></td>
+    </tr>
+    <tr>
+      <td className="border border-black p-2 text-center text-xl"><input type="text" className="w-full" /></td>
+      <td className="border border-black p-2 text-center text-xl"><input type="text" className="w-full" /></td>
+      <td className="border border-black p-2 text-center text-xl"><input type="text" className="w-full" /></td>
+    </tr>
+    <tr>
+      <td className="border border-black p-2 text-center text-xl"><input type="text" className="w-full" /></td>
+      <td className="border border-black p-2 text-center text-xl"><input type="text" className="w-full" /></td>
+      <td className="border border-black p-2 text-center text-xl"><input type="text" className="w-full" /></td>
+    </tr>
+    <tr>
+      <td className="border border-black p-2 text-center text-xl"><input type="text" className="w-full" /></td>
+      <td className="border border-black p-2 text-center text-xl"><input type="text" className="w-full" /></td>
+      <td className="border border-black p-2 text-center text-xl"><input type="text" className="w-full" /></td>
+    </tr>
+    <tr>
+      <td className="border border-black p-2 text-center text-xl"><input type="text" className="w-full" /></td>
+      <td className="border border-black p-2 text-center text-xl"><input type="text" className="w-full" /></td>
+      <td className="border border-black p-2 text-center text-xl"><input type="text" className="w-full" /></td>
+    </tr>
+  </tbody>
+</table>
+
+            </div>
           </div>
-          <div className="flex justify-end leading-loose">
+          <div className="flex items-center  justify-end my-3">
+          <img src={stamp} className="w-[10%] mr-32 mt-8" alt="" />
+
+          </div>
+          <div className="flex flex-col items-end  leading-loose">
+            
             <span className="mt-3"><p className="font-medium">Signature with official Seal</p>
             <p className="my-3">For M/S <input type="text" value={"Green Life Solutions Pvt Ltd"} className="w-60 border-b border-black px-2"/></p>
             <p className="my-3">Name: <input type="text" className="w-52 border-b border-black px-2" /> </p>
             <p className="my-3">Designation:<input type="text" className="w-52 border-b border-black px-2" /> </p>
-            <p className="my-3">Phone: <input type="text" className="w-52 border-b border-black px-2" /></p>
-            <p className="my-3">Email: <input type="text" className="w-52 border-b border-black px-2" /></p>
+            <p className="my-3">Phone: <input type="text" className="w-52 border-b border-black px-2" value="7447445082" /></p>
+            <p className="my-3">Email: <input type="text" className="w-58 border-b border-black px-2" value="info@greenlifesolution.in" /></p>
             </span> 
             
           </div>
+
+          
         </div>
       </div>
 

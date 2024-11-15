@@ -25,10 +25,10 @@ const SolarPowerPlantReport = () => {
     <div className="p-3 mx-52">
       <div className="flex justify-center items-center" ref={reportRef}>
         <div className="p-5" ref={reportRef}>
-          <h1 className="text-2xl font-bold mb-2 text-center my-4">
+          <h1 className="text-2xl font-bold mb-2 text-center my-8">
             Work Completion Report for Solar Power Plant
           </h1>
-          <table className="border border-black text-base p-1">
+          <table className="border border-black text-lg p-1 my-16 w-full">
             <thead>
               <tr>
                 <th className="border border-black">Sr.No</th>
@@ -125,16 +125,17 @@ const SolarPowerPlantReport = () => {
                     onChange={handleChange}
                     name="solarSystemCapacity"
                   />
-
                 </td>
               </tr>
               <tr className="text-center font-medium border border-black ">
                 <td></td>
-                <td className="text-end text-lg p-2 ">Specification of the Modules</td>
+                <td className="text-end text-lg p-2 ">
+                  Specification of the Modules
+                </td>
               </tr>
               <tr>
                 <td className=" p-2 text-center"></td>
-                <td className="border border-black p-2">Type of modules</td>
+                <td className="border border-black p-2">Make of modules</td>
                 <td className="border border-black p-2">
                   <input
                     type="text"
@@ -207,111 +208,126 @@ const SolarPowerPlantReport = () => {
                   />
                 </td>
               </tr>
+              {/*  */}
+            </tbody>
+          </table>
 
-              <tr className="text-center font-medium border border-black ">
-                <td></td>
-                <td className="text-end  text-lg p-2">PCU</td>
+          <table className="border border-black text-lg p-1 mt-52 ">
+            <thead>
+              <tr className="text-center font-medium border border-black">
+                <th className="border border-black"></th>
+                <th className="text-end text-lg p-2">PCU</th>
+                <th className=" border-black p-2 w-[45%]"></th>
               </tr>
+            </thead>
+            <tbody>
+              {/* PCU Section */}
               <tr>
-                <td className=" p-2 text-center"></td>
+                <td className="p-2 text-center"></td>
                 <td className="border border-black p-2">
                   Make & Model number of Inverter
                 </td>
                 <td className="border border-black p-2">
                   <input
                     type="text"
-                    className="w-full  border-none border-gray-300 outline-none text-lg"
+                    className="w-full border-none outline-none text-lg"
                     name="inverterModelNumber"
                     onChange={handleChange}
                   />
                 </td>
               </tr>
               <tr>
-                <td className=" p-2 text-center"></td>
+                <td className="p-2 text-center"></td>
                 <td className="border border-black p-2">Rating</td>
                 <td className="border border-black p-2">
                   <input
                     type="text"
-                    className="w-full  border-none border-gray-300 outline-none text-lg"
-                    onChange={handleChange}
+                    className="w-full border-none outline-none text-lg"
                     name="rating"
+                    onChange={handleChange}
                   />
                 </td>
               </tr>
               <tr>
-                <td className=" p-2 text-center">8</td>
+                <td className="p-2 text-center">8</td>
                 <td className="border border-black p-2">
                   Type of charge controller/ MPPT
                 </td>
                 <td className="border border-black p-2">
                   <input
                     type="text"
-                    className="w-full p-1 border-none border-gray-300 outline-none text-lg"
-                    onChange={handleChange}
+                    className="w-full border-none outline-none text-lg"
                     name="mppt"
+                    onChange={handleChange}
                   />
                 </td>
               </tr>
               <tr>
-                <td className=" p-2 text-center"></td>
+                <td className="p-2 text-center"></td>
                 <td className="border border-black p-2">
                   Capacity of Inverter
                 </td>
                 <td className="border border-black p-2">
                   <input
                     type="text"
-                    className="w-full p-1 border-none border-gray-300 outline-none text-lg"
-                    onChange={handleChange}
+                    className="w-full border-none outline-none text-lg"
                     name="capacityOfInverter"
+                    onChange={handleChange}
                   />
                 </td>
               </tr>
-              <tr className="">
-                <td className=" p-2 text-center"></td>
+              <tr>
+                <td className="p-2 text-center"></td>
                 <td className="border border-black p-2">HPD</td>
-                <td className="border border-black p-2"><input type="text" 
-                
-                className="w-full p-1 border-none border-gray-300 outline-none text-lg"
-                onChange={handleChange}
-                name="hpd"
-                /></td>
+                <td className="border border-black p-2">
+                  <input
+                    type="text"
+                    className="w-full border-none outline-none text-lg"
+                    name="hpd"
+                    onChange={handleChange}
+                  />
+                </td>
               </tr>
               <tr>
-                <td className="border-b border-black p-2 text-center"></td>
+                <td className="border border-black p-2 text-center"></td>
                 <td className="border border-black p-2">
                   Year of manufacturing
                 </td>
                 <td className="border border-black p-2">
                   <input
                     type="text"
-                    className="w-full p-1 border-none border-gray-300 outline-none text-lg"
-                    onChange={handleChange}
+                    className="w-full border-none outline-none text-lg"
                     name="yearOfManufacturing"
+                    onChange={handleChange}
                   />
                 </td>
               </tr>
 
-              <tr className="text-center font-medium border border-black ">
-                <td></td>
-                <td className="text-end  text-lg p-2">Earthing and Protections</td>
+              {/* Earthing and Protections Section */}
+              <tr className="text-center font-medium border border-black">
+                <td className="border border-black"></td>
+                <td className="text-end text-lg p-2">
+                  Earthing and Protections
+                </td>
+                <td className=" border-black"></td>
               </tr>
               <tr>
-                <td className=" p-2 text-center">9</td>
+                <td className="p-2 text-center">9</td>
                 <td className="border border-black p-2">
                   No of Separate Earthings with earth Resistance
                 </td>
                 <td className="border border-black p-2">
                   <input
                     type="text"
-                    className="w-full p-1 border-none border-gray-300 outline-none text-lg"
+                    className="w-full border-none outline-none text-lg"
                     name="NoOfSeparateEarthingsWithEarthResistance"
                     onChange={handleChange}
                   />
                 </td>
               </tr>
               <tr>
-                <td></td>
-                <td className="border border-black p-2 text-start" colSpan="3">
+                <td className="border border-black"></td>
+                <td className="border border-black p-2 text-start" colSpan="2">
                   It is certified that the Earth Resistance measure in presence
                   of Licensed Electrical Contractor/Supervisor and found in
                   order i.e. 5 Ohms as per MNRE OM Dtd. 07.06.24 for CFA
@@ -319,30 +335,46 @@ const SolarPowerPlantReport = () => {
                 </td>
               </tr>
               <tr>
-                <td className=" border border-black p-2 text-center">10</td>
+                <td className="p-2 text-center">10</td>
                 <td className="border border-black p-2">Lightening Arrester</td>
                 <td className="border border-black p-2">
                   <input
                     type="text"
-                    className="w-full p-1 border-none border-gray-300 outline-none text-lg"
-                    onChange={handleChange}
+                    className="w-full border-none outline-none text-lg"
                     name="lighteningArrester"
+                    onChange={handleChange}
                   />
                 </td>
               </tr>
             </tbody>
           </table>
-          <div className="mt-2 text-md p-4 leading-relaxed">
-            <p className="leading-relaxed text-lg">
+
+          <div className="mt-2 text-md p-4 leading-relaxed ">
+            <p className="leading-relaxed text-lg my-12">
               We{" "}
-              <input type="text" className="border-b border-black w-64 px-2 text-lg" value={"Green Life Solutions Pvt Ltd"} readOnly />{" "}
-              [Vendor]& <input type="text" className="border-b border-black w-52 px-2 " value={formData.consumerName} />[Consumer] bearing Consumer
-              Number <input type="text" className="border-b border-black w-52 px-2 " value={formData.consumerNumber} /> Ensured structural stability of installed
-              solar power plant and obtained requisite permissions from the
-              concerned authority. If in future, by virtue of any means due to
-              collapsing or damage to installed solar power plant, MSEDCL will
-              not be held responsible for any loss to property or human life, if
-              any
+              <input
+                type="text"
+                className="border-b border-black w-64 px-2 text-lg"
+                value={"Green Life Solutions Pvt Ltd"}
+                readOnly
+              />{" "}
+              [Vendor]&{" "}
+              <input
+                type="text"
+                className="border-b border-black w-52 px-2 "
+                value={formData.consumerName}
+              />
+              [Consumer] bearing Consumer Number{" "}
+              <input
+                type="text"
+                className="border-b border-black w-52 px-2 "
+                value={formData.consumerNumber}
+              />{" "}
+              Ensured structural stability of installed solar power plant and
+              obtained requisite permissions from the concerned authority. If in
+              future, by virtue of any means due to collapsing or damage to
+              installed solar power plant, MSEDCL will not be held responsible
+              for any loss to property or human life, if any
             </p>
 
             <p className="my-4 text-lg">
@@ -354,14 +386,37 @@ const SolarPowerPlantReport = () => {
               feeding. We will be held responsible for non-working of islanding
               mechanism and back feed to the de-energized grid.
             </p>
+
+            <div className="mt-56">
+              <p className="text-center font-medium text-lg my-5">
+                Guarantee Certificate Undertaking to be submitted by VENDOR
+              </p>
+              <p className="text-lg ">
+                The undersigned will provide the services to the consumers for
+                repairs/maintenance for system component of the RTS plant free
+                of cost for 5 years of the comprehensive Maintenance Contract
+                (CMC) period from the date of commissioning of the plant. Non
+                performing/under-performing system component will be
+                replaced/repaired as per manufacturer stander terms and
+                condition till CMC period.
+              </p>
+            </div>
           </div>
 
           <div className="flex justify-between mx-24 mt-1 mb-2 text-xl ">
             <div className="">
               <p className="mb-2">Signature [Vendor]</p>
-              <img src={stamp} alt="stamp of Company" className="w-[40%] my-4" />
+              <img
+                src={stamp}
+                alt="stamp of Company"
+                className="w-[40%] my-4"
+              />
             </div>
             <p>Signature[Consumer]</p>
+          </div>
+          <div className="my-4 text-lg">
+            <p className="my-3">Identity Details of Consumer: - <input type="text" className="w-42 border-b border-black m-2" /></p>
+            <p className="my-3">Aadhaar Number : - <input type="number" className="w-43 border-b border-black m-2" /></p>
           </div>
         </div>
       </div>

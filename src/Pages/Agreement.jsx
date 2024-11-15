@@ -26,14 +26,14 @@ const Agreement = () => {
       <div className="flex justify-center py-10">
         {/* Main report container */}
         <div
-          className="w-full max-w-4xl bg-white p-8 rounded-lg shadow-lg my-3"
+          className="w-full max-w-4xl bg-white p-8 rounded-lg  my-3"
           ref={reportRef}
         >
           {/* Header Section */}
           <h1 className="text-center text-lg font-medium">
             Net Metering Connection Agreement
           </h1>
-          <p className="text-lg">
+          <p className="text-lg ">
             This Agreement is made and entered into at Solapur on this{" "}
             <input type="text" className="border-b border-black w-28" />
             day of{" "}
@@ -63,17 +63,17 @@ const Agreement = () => {
           </p>
           <p className="text-center text-lg">AND</p>
 
-          <p>
+          <p className="text-lg">
             The Distribution Licensee- Maharashtra State Electricity
             Distribution Co. Ltd; and having its Registered Office at{" "}
             <input
               type="text"
-              className="border-b border-black w-[30rem] my-3 px-2"
+              className="border-b border-black w-[30rem] my-3 px-2 text-lg"
             />
             as second Party of this Agreement;
           </p>
 
-          <p className="my-4">
+          <p className="my-4 text-lg">
             Whereas, the Eligible Consumer has applied to the Licensee for
             approval of a Net Metering Arrangement under the provisions of the
             Maharashtra Electricity Regulatory Commission (Net Metering for
@@ -82,15 +82,15 @@ const Agreement = () => {
             Distribution Network ;
           </p>
 
-          <p>
+          <p className="text-lg">
             And whereas, the Licensee has agreed to provide Network connectivity
             to the Eligible Consumer for injection of electricity generated from
             its Roof-top Solar PV System of{" "}
-            <input type="text" className="my-3 border-b border-black w-24" value={formData.solarSystemCapacity} />{" "}
+            <input type="text" className="my-3 border-b border-black w-24 text-lg" value={formData.solarSystemCapacity} />{" "}
             kilowatt; Both Parties hereby agree as follows:-
           </p>
 
-          <ul className="list-decimal my-4">
+          <ul className="list-decimal text-lg  my-4">
             <li className="my-2">
               <p className="text-lg font-medium  ">Eligiblity</p>
               <p className="font-normal pl-3 m-2">
@@ -112,20 +112,20 @@ const Agreement = () => {
                 technical standards and norms specified by the Central
                 Electricity Authority for connectivity of distributed generation
                 resources and for the installation and operation of meters.
-                <p className="my-3">
+                <p className="my-4">
                   The Eligible Consumer agrees, that he shall install, prior to
                   connection of the Roof-top Solar PV System to the Network of
                   the Licensee, an isolation device (both automatic and in built
                   within inverter and external manual relays); and the
-                  <p className="my-3">
+                  <p className="my-4">
                     Licensee shall have access to it if required for the repair
                     and maintenance of the Distribution Network.
                   </p>
-                  <p className="my-3">
+                  <p className="my-4">
                     The Licensee shall specify the interface/inter-connection
                     point and metering point.
                   </p>
-                  <p className="my-3">
+                  <p className="my-4">
                     The Eligible Consumer shall furnish all relevant data, such
                     as voltage, frequency, circuit breaker, isolator position in
                     his System, as and when required by the Licensee.
@@ -134,9 +134,9 @@ const Agreement = () => {
               </p>
             </li>
 
-            <li className="leading-relaxed">
-              <p className="font-medium text-lg">Safety</p>
-              <p className="my-4 pl-3 m-2">
+            <li className="leading-relaxed mt-24">
+              <p className="font-medium text-lg ">Safety</p>
+              <p className=" pl-3 m-2 my-3">
                 The equipment connected to the Licensee's Distribution System
                 shall be compliant with relevant International (IEEE/IEC) or
                 Indian Standards (BIS), as the case may be, and the installation
@@ -145,14 +145,14 @@ const Agreement = () => {
                 and electricity supply.
               </p>
 
-              <p className="my-4 pl-3 m-2">
+              <p className="my-4 pl-3 m-2 my-3">
                 The design, installation, maintenance and operation of the
                 Roof-top Solar PV System shall be undertaken in a manner
                 conducive to the safety of the Roof-top Solar PV System as well
                 as the Licensee's Network
               </p>
 
-              <p className="my-4 pl-3 m-2">
+              <p className="my-4 pl-3 m-2 my-3">
                 If, at any time, the Licensee determines that the Eligible
                 Consumer's Roof-top Solar PV System is causing or may cause
                 damage to and/or results in the Licensee's other consumers or
@@ -162,7 +162,7 @@ const Agreement = () => {
                 his own expense prior to re-connection.
               </p>
 
-              <p className="my-4 pl-3 m-2">
+              <p className=" pl-3 m-2 my-3">
                 The Licensee shall not be responsible for any accident resulting
                 in injury to human beings or animals or damage to property that
                 may occur due to back- feeding from the Roof-top Solar PV System
@@ -185,8 +185,8 @@ const Agreement = () => {
               </p>
             </li>
 
-            <li className="leading-relaxed">
-              <p className="my-4 pl-3 m-2">
+            <li className="leading-relaxed mt-44 ">
+              <p className="my-4 pl-3 m-2 font-medium text-lg">
                 Period of Agreement, and Termination
               </p>
               <p className="my-4 pl-3 m-2">
@@ -255,19 +255,19 @@ const Agreement = () => {
               </p>
             </li>
 
-            <li className="leading-relaxed">
-              <p className="text-lg font-medium">Commercial Settlement:</p>
-              <p className="m-2 my-4 px-3 pl-2">
+            <li className="leading-relaxed mt-44">
+              <p className="text-lg font-medium ">Commercial Settlement:</p>
+              <p className="m-2 my-3 px-3 pl-2">
                 The commercial settlements under this Agreement shall be in
                 accordance with the Net Metering Regulations.{" "}
               </p>
-              <p className="m-2 my-4 px-3 pl-2">
+              <p className="m-2 my-3 px-3 pl-2">
                 The Licensee shall not be liable to compensate the Eligible
                 Consumer if his Rooftop Solar PV System is unable to inject
                 surplus power generated into the Licensee's Network on account
                 of failure of power supply in the grid/Network.
               </p>
-              <p className="m-2 my-4 px-3 pl-2">
+              <p className="m-2 my-3 px-3 pl-2">
                 The existing metering System, if not in accordance with the Net
                 Metering Regulations, shall be replaced by a bi-directional
                 meter (whole current/CT operated) or a pair of meters (as per
@@ -276,7 +276,7 @@ const Agreement = () => {
             </li>
 
             <li>
-              <p className="text-lg font-medium">Connection Costs:</p>
+              <p className="text-lg font-medium my-10">Connection Costs:</p>
               <p className="m-2 my-4 px-3 pl-2">
                 The Eligible Consumer shall bear all costs related to the
                 setting up of the Roof-top Solar PV System, excluding the Net
@@ -300,28 +300,29 @@ const Agreement = () => {
 
               <p className="m-2 my-4 px-3 pl-2">
                 In the witness where of (VENDOR
-                NAME) <input type="text" className="w-56 border-b mx-2 px-2 border-black" value={"Green Life Solution Pvt Ltd"}/> for and on behalf of
+                NAME) <input type="text" className="w-60 border-b mx-2 px-2 border-black text-lg" value={"Green Life Solution Pvt Ltd"}/> for and on behalf of
                 Eligible Consumer and Shri.{" "}
                 <input
                   type="text"
-                  className="w-72 border-b mx-2 my-3 px-2 border-black"
+                  className="w-72 border-b mx-3 my-3 px-2 border-black text-lg"
+                  value={formData.consumerName}
                 />{" "}
                 for and on behalf of MSEDCL agree to this agreement.
               </p>
             </li>
           </ul>
 
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between my-8 text-lg ">
             <div className="">
-                  <input type="text" className="w-56 border-b border-black" />
+                  <input type="text" className="w-56 border-b border-black text-lg" />
                   <p>For Eligible Consumer</p>
 
-                  <p className="my-5">
+                  <p className="">
                     Witness 1 (VENDOR)
                   </p>
             </div>
-            <div className="my-4">
-                  <p>Shri<input type="text" className="w-56 border-b border-black" /> <br />for and on behalf of MSEDCL</p>
+            <div className="">
+                  <p>Shri<input type="text" className="w-56 border-b border-black text-lg mx-2 px-2" /> <br />for and on behalf of MSEDCL</p>
                   <p>Witness 1</p>
             </div>
           </div>
