@@ -145,9 +145,12 @@ const GenerationSystem = () => {
                   <input type="date" className="" onChange={handleChange} name="date" />
                 </td>
               </tr>
-              <tr>
-                <td className="px-4 py-2">15</td>
-                <td className="px-4 py-2 font-medium">SolarPV Details</td>
+              
+            </tbody>
+            <tbody className="my-10">
+            <tr>
+                <td className="px-4 w-[12%] py-2">15</td>
+                <td className="px-4 py-2 font-medium w-[67%]">SolarPV Details</td>
                 <td className="px-4 py-2"></td>
               </tr>
               <tr>
@@ -174,6 +177,8 @@ const GenerationSystem = () => {
               </tr>
             </tbody>
           </table>
+
+          
         </div>
 
         {/* Proforma Section */}
